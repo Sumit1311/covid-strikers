@@ -1,0 +1,21 @@
+<html>
+<title>Test Page</title>
+<script>
+
+    //var socket = io();
+
+    var socket = new WebSocket("wss://33bcb888d1ee.ngrok.io/");
+    socket.onopen = function () {
+        console.log("opened");
+    };
+
+    socket.onerror = function (err) {
+        console.log("error", err);
+    };
+</script>
+
+<body>
+
+</body>
+
+</html>
