@@ -105,7 +105,7 @@ app.post('/gather', (request, response) => {
 
 // Create an HTTP server and listen for requests on port 3000
 console.log('Twilio Client app HTTP server running at http://127.0.0.1:3000');
-const server = app.listen(3000);
+const server = app.listen(process.env.PORT || 3000);
 const wss = new WebSocket.Server({ server });
 let file;
 wss.on('connection', (socket) => {
