@@ -8,13 +8,13 @@ const client = require('twilio')(accountSid, authToken);
   const response = new VoiceResponse();
   response.redirect({
     method: 'GET'
-  }, 'http://33978658b63d.ngrok.io/autopilot');
+  }, 'https://covid-strikers.herokuapp.com/autopilot');
 
   console.log( response.toString());
   const call = await client.calls
     .create({
-      //url: 'http://33978658b63d.ngrok.io/autopilot',
-      url: 'http://33978658b63d.ngrok.io/voice',
+      //url: 'https://covid-strikers.herokuapp.com/autopilot',
+      url: 'https://covid-strikers.herokuapp.com/voice',
       //twiml: response.toString(),
       to: '+917588415318',
       //to: '+919158484949',

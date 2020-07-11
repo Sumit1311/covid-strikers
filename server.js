@@ -30,7 +30,7 @@ app.get('/twiml', (req, response) => {
     twiml.say('For sales, press 1. For support, press 2.')
     twiml.start().stream({
         name: "Example Live Stream",
-        url: "wss://33bcb888d1ee.ngrok.io"
+        url: "wss://covid-strikers.herokuapp.com/twiml"
     });
     twiml.pause({
         length: 10
