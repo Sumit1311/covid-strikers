@@ -73,6 +73,19 @@ app.post('/voice', (request, response) => {
     response.send(twiml.toString());
 });
 
+app.post('/reject', (request, response) => {
+    // Use the Twilio Node.js SDK to build an XML response
+    const twiml = new VoiceResponse();
+
+    twiml.reject({
+        reason: 'busy'
+    });
+
+    response.type('text/xml');
+    response.send(twiml.toString());
+});
+
+
 // Create a route that will handle <Gather> input
 app.post('/gather', (request, response) => {
     // Use the Twilio Node.js SDK to build an XML response
