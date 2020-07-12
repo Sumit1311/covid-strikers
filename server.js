@@ -74,6 +74,7 @@ app.post('/voice', (request, response) => {
 });
 
 app.get('/reject', (request, response) => {
+    console.log(request);
     // Use the Twilio Node.js SDK to build an XML response
     const twiml = new VoiceResponse();
 
